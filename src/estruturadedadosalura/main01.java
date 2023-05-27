@@ -8,9 +8,9 @@ public class main01 {
 
         Vetor lista = new Vetor();
 
-        lista.adiciona(a1);
+        lista.adiciona(0,a1);
         System.out.println(lista.tamanho());
-        lista.adiciona(a2);
+        lista.adiciona(1,a2);
         System.out.println(lista.tamanho());
 
         System.out.println(lista);
@@ -21,8 +21,12 @@ public class main01 {
 
 //        Aluno x = lista.pega(158);
 //        System.out.println(x);
-
-
+//
+        lista.adiciona(2, a3);
+        System.out.println(lista);
+        
+        lista.remove(1);
+        System.out.println(lista);
     }
 
 }

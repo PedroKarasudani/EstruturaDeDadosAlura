@@ -1,5 +1,7 @@
 package estruturadedadosalura;
 
+import java.util.ArrayList;
+
 public class main01 {
 
     public static void main(String[] args) {
@@ -12,9 +14,9 @@ public class main01 {
 
         //adicionando Joao e Jose na lista e mostrando o tamanho da lista e 
         //no final os nomes que compoe a lista
-        lista.adiciona(0,a1);
+        lista.adiciona(a1);
         System.out.println(lista.tamanho());
-        lista.adiciona(1,a2);
+        lista.adiciona(a2);
         System.out.println(lista.tamanho());
         System.out.println(lista);
 
@@ -34,6 +36,20 @@ public class main01 {
         //removendo Jose
         lista.remove(1);
         System.out.println(lista);
-    }
-
+        
+        
+        //adicionando 300 Lucas, e mostrando que automaticamente dobra o numero da lista
+        for (int i = 0; i < 300; i++) {
+           Aluno y  = new Aluno("Lucas" + i);
+           lista.adiciona(y);
+        }
+        
+        System.out.println(lista);
+   
+    
+    // mostrando que ja existe uma classe do java parecida com a que criamos 
+//        ArrayList<Aluno> listaDoJavas = new ArrayList<Aluno>();
+//        listaDoJavas.add(a3);
+    
+    }  
 }

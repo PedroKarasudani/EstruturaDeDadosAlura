@@ -49,14 +49,14 @@ public class ListaLigada {
     }
 
     public Object pega(int posicao) {
-        return null;
+        return this.pegaCelula(posicao).getElemento();
     }
 
     public void remove(int posicao) {
     }
 
     public int tamanho() {
-        return 0;
+        return this.totalDeElementos;
     }
 
     public boolean contem(Object o) {

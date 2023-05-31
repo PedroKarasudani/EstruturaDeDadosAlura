@@ -26,7 +26,26 @@ public class ListaLigada {
         }
     }
 
+    private boolean posicaoOcupada(int posicao){
+         return posicao >= 0 && posicao<this.totalDeElementos;
+    }
+    
+    private Celula pegaCelula(int posicao){
+        if(!posicaoOcupada(posicao)){
+            throw new IllegalArgumentException("Posicao Inexistente");
+        }
+        Celula atual = primeira;
+        for (int i = 0; i < posicao; i++) {
+            atual = atual.getProximo();
+        }
+        return atual;
+    }
+
     public void adiciona(int posicao, Object elemento) {
+        Celula anterior = this.pegaCelula(posicao - 1);
+        Celula nova = new Celula(elemento, anterior.getProximo());
+        anterior.setProximo(nova);
+        totalDeElementos++;
     }
 
     public Object pega(int posicao) {
